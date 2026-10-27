@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>College Event Registration System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>College Event Registration System</h1>
+  <p>DSA Microproject — Registration Management</p>
+</header>
+
+<main class="container">
+  <div class="stats">
+    <div class="stat"><span>Total Registrations</span><strong id="total">0</strong></div>
+    <div class="stat"><span>Operations</span><strong>5</strong></div>
+  </div>
+
+  <div class="grid">
+    <section class="card">
+      <h2>Register Student</h2>
+      <form id="form">
+        <label for="id">Student ID</label>
+        <input id="id" type="number" min="1" placeholder="e.g. 101" required>
+
+        <label for="name">Student Name</label>
+        <input id="name" type="text" maxlength="50" placeholder="Enter full name" required>
+
+        <label for="event">Event Name</label>
+        <select id="event" required>
+          <option value="">Select event</option>
+          <option>Coding Competition</option>
+          <option>Project Exhibition</option>
+          <option>Workshop</option>
+          <option>Dance Competition</option>
+          <option>Sports Event</option>
+        </select>
+
+        <button type="submit">Register Student</button>
+      </form>
+      <p id="message"></p>
+    </section>
+
+    <section class="card">
+      <h2>Search Student</h2>
+      <div class="search">
+        <input id="searchId" type="number" min="1" placeholder="Enter Student ID">
+        <button id="searchBtn" type="button">Search</button>
+      </div>
+      <div id="searchResult" class="result">Enter a Student ID to search.</div>
+    </section>
+  </div>
+
+  <section class="card records">
+    <div class="recordsHead">
+      <h2>Registered Students</h2>
+      <button id="clearBtn" class="secondary" type="button">Clear All</button>
+    </div>
+    <div class="tableWrap">
+      <table>
+        <thead>
+          <tr><th>ID</th><th>Student Name</th><th>Event</th><th>Action</th></tr>
+        </thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </div>
+    <p id="empty">No registrations found.</p>
+  </section>
+</main>
+
+<footer>College Event Registration System | DSA Microproject</footer>
+<script src="script.js"></script>
+</body>
+</html>
